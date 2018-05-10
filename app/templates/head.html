@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>{{title}}</title>
+
+  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+  <!-- Bootstrap core CSS-->
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+  <!-- Custom fonts for this template-->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="{{ url_for('static', filename='css/sb-admin.css') }}" rel="stylesheet" type="text/css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+
+
+</head>
+		{% block menu_login %}
+		{% endblock %}
+  <!-- Bootstrap core JavaScript-->
+
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="{{ url_for('static', filename='js/sb-admin.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/grayscale.min.js') }}"></script>
+  {% block headpage %}
+  {% endblock %}
+
+</body>
+</html>
