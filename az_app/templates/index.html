@@ -1,0 +1,152 @@
+{% extends 'headerFooter_main.html' %}
+{% include 'doc_translater_pages/languages.html' %}
+
+{% block display_pages %}
+<div class="container mb-2">
+
+    <nav class="navbar navbar-expand-lg navbar-light white">
+
+      <a class="navbar-brand mr-5" href="/"><img src="{{ url_for('static', filename='static/img/forapp/pamparios.jpg') }}" height="55" alt="pamparios logo" ></a>
+
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+        aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+
+
+        <ul class="navbar-nav mr-auto">
+
+
+          <li class="nav-item dropdown mega-dropdown mr-5">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-book"></i> Translation
+              <span class="sr-only">(current)</span>
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <a class="dropdown-item" href="/dictionary/"><i>Dictionary</i></a>
+                      <a class="dropdown-item" href="/addtranslation/"><i>Translate</i></a>
+                      <a class="dropdown-item" href="/translate/"><i>Untranslated Words</i></a>
+<!--                      <a class="dropdown-item" href="/" data-toggle="modal" data-target="#language"><i>Languages555</i></a>-->
+                      <a class="dropdown-item" href="#" id="langid"><i>Languages</i></a>
+
+                  </div>
+
+              </div>
+            </div>
+          </li>
+
+
+          <li class="nav-item dropdown mega-dropdown mr-5">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-database"></i>
+                Files Scanning
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <a class="dropdown-item" href="/upload/"><i>Upload/Scan Files</i></a>
+                      <a class="dropdown-item" href="/uploaded/"><i>Uploaded Files</i></a>
+                      <a class="dropdown-item" href="/extracting/"><i>Extraction Progress</i></a>
+                      <a class="dropdown-item" href="/extracted/"><i>Extracted Docs</i></a>
+
+                  </div>
+
+              </div>
+            </div>
+          </li>
+
+
+
+
+          <li class="nav-item dropdown mega-dropdown mr-5">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-fw fa-cog"></i>
+                Settings
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownMenuLink1">
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <a class="dropdown-item" href="/adduser/" ><i>Add New User</i></a>
+                      <a class="dropdown-item" href="/addlang/" ><i>Add Language</i></a>
+                      <a class="dropdown-item" href="/users/" ><i>Server Users</i></a>
+                      <a class="dropdown-item" href="/surfers/" ><i>Surf Users</i></a>
+
+                  </div>
+
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown mega-dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user"></i>
+                Profile
+            </a>
+            <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownMenuLink4">
+              <div class="row">
+                  <div class="col-md-12">
+
+                      <a class="dropdown-item" href="#" ><i>{{ fname }} {{ lname }}</i></a>
+<!--                      <a class="dropdown-item" href="#" ><i>{{ fl_name }}</i></a>-->
+                      <a class="dropdown-item" href="#" ><i>{{ umail }}</i></a>
+                      <a class="dropdown-item" href="/logout/" ><i class="fa fa-sign-out">  Log Out</i></a>
+
+                  </div>
+
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+
+      </div>
+      <!-- Collapsible content -->
+
+    </nav>
+
+
+
+</div>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+
+  {% if messages %}
+
+          {% for category, message in messages %}
+
+                <div class="row d-flex justify-content-center" >
+
+                    <div class="col-md-5">
+
+                        <div class="alert alert-{{ category }} alert-dismissible">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            {{ message }}
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+          {% endfor %}
+
+  {% endif %}
+
+{% endwith %}
+
+
+{% block content %}{% endblock %}
+
+{% endblock %}
+

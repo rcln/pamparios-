@@ -1,0 +1,207 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container-fluid" >
+
+
+    <div class="row d-flex justify-content-center">
+
+            <div class="col-md-8">
+
+                    <!-- Card -->
+                    <div class="card gradient-card">
+
+                              <!-- Card image -->
+                              <div class="view view-cascade gradient-card-header peach-gradient px-2">
+
+                                    <!-- Title -->
+                                    <h3 class="card-header-title mb-3">Upload Files</h3>
+                                    <!-- Subtitle -->
+                                    <p class="card-header-subtitle mb-0 text-dark">Add the ressources for the translator training</p>
+
+                              </div>
+
+                              <!-- Card content -->
+                              <div class="card-body card-body-cascade text-center">
+
+
+                                  <div class="row d-flex justify-content-center">
+
+
+                                      <div class="col-md-8">
+
+
+                                          <form method="POST" enctype="multipart/form-data">
+
+                                              {{ form.hidden_tag() }}
+
+
+                                                  <div class="row d-flex justify-content-center">
+
+
+                                                      <div class="col-md-8">
+
+                                                          <div class="md-form">
+
+                                                             <div class="file-field">
+
+
+                                                                    {% if form.slctFile.errors %}
+
+                                                                    {{ form.slctFile(class='btn btn-primary btn-sm') }}
+                                                                        <div class="invalid-feedback d-block">
+                                                                            {% for error in form.slctFile.errors %}
+                                                                            <span>{{ error }}</span>
+                                                                            {% endfor %}
+                                                                        </div>
+
+                                                                    {% else %}
+
+                                                                        {{ form.slctFile(class='btn btn-primary btn-sm') }}
+
+                                                                    {% endif %}
+
+                                                             </div>
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+
+                                                  <div class="row d-flex justify-content-center">
+
+
+                                                      <div class="col-md-6">
+
+                                                          <div class="md-form form-group">
+
+                                                              {{ form.strtPage.label() }}
+
+                                                                {% if form.strtPage.errors %}
+
+                                                                    {{ form.strtPage(class='form-control is-invalid') }}
+                                                                    <div class="invalid-feedback">
+                                                                        {% for error in form.strtPage.errors %}
+                                                                        <span>{{ error }}</span>
+                                                                        {% endfor %}
+                                                                    </div>
+
+                                                                {% else %}
+
+                                                                    {{ form.strtPage(class='form-control') }}
+
+                                                                {% endif %}
+
+
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+
+
+                                                  <div class="row d-flex justify-content-center">
+
+                                                        <div class="col-md-6">
+
+                                                          <div class="md-form form-group">
+
+                                                              {{ form.endPage.label() }}
+
+                                                                {% if form.endPage.errors %}
+
+                                                                    {{ form.endPage(class='form-control is-invalid') }}
+                                                                    <div class="invalid-feedback">
+                                                                        {% for error in form.endPage.errors %}
+                                                                        <span>{{ error }}</span>
+                                                                        {% endfor %}
+                                                                    </div>
+
+                                                                {% else %}
+
+                                                                    {{ form.endPage(class='form-control') }}
+
+                                                                {% endif %}
+
+
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+
+
+
+                                                  <div class="row d-flex justify-content-center">
+
+                                                        <div class="col-md-6">
+
+                                                          <div class="md-form form-group">
+
+                                                              <span style="float: left;">Languages</span>
+
+                                                                {% if form.lang.errors %}
+
+                                                                    {{ form.lang(class='form-control form-control-lg is-invalid') }}
+                                                                    <div class="invalid-feedback">
+                                                                        {% for error in form.lang.errors %}
+                                                                        <span>{{ error }}</span>
+                                                                        {% endfor %}
+                                                                    </div>
+
+                                                                {% else %}
+
+                                                                    {{ form.lang(class='form-control form-control-lg') }}
+
+                                                                {% endif %}
+
+
+                                                          </div>
+
+                                                      </div>
+
+                                                  </div>
+
+
+
+                                                  <div class="row d-flex justify-content-center">
+
+                                                      <input class="btn btn-primary" type="submit" value="Start" />
+
+                                                  </div>
+
+
+
+
+
+                                              </form>
+
+
+                                      </div>
+
+
+                                  </div>
+
+
+
+
+
+                                <hr>
+
+                                <!-- Twitter -->
+                                <a class="">Pamparios</a>
+
+                              </div>
+
+                    </div>
+                    <!-- Card -->
+
+            </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

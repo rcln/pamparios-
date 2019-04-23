@@ -1,0 +1,170 @@
+
+
+{% extends 'headerFooter_main.html' %}
+
+{% block display_pages %}
+
+
+<div class="container mt-5" >
+
+    <div class="row d-flex justify-content-center">
+
+      <div class="col-md-8 mb-4">
+
+        <div class="card gradient-card">
+
+            <div class="card-image mb-5" >
+
+              <a href="#!">
+                <div class="text-white d-flex h-100 mask peach-gradient">
+                  <div class="first-content align-self-center p-3">
+                    <h3 class="card-title text-dark">Log In Pamparios</h3>
+                  </div>
+                  <div class="second-content align-self-center mx-auto text-center">
+                    <i class="far fa-money-bill-alt fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+
+
+            <form method="POST" >
+
+
+                <div class="row d-flex justify-content-center mb-3">
+
+
+                    <div class="col-md-8">
+
+                        <div class="md-form form-group">
+
+                            {{ form.hidden_tag() }}
+
+                            {{ form.email.label() }}
+
+                            {% if form.email.errors %}
+
+                                {{ form.email(class='form-control is-invalid') }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                    <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+
+                            {% else %}
+
+                                {{ form.email(class='form-control') }}
+
+                            {% endif %}
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row d-flex justify-content-center mb-3">
+
+
+                    <div class="col-md-8">
+
+                        <div class="md-form form-group">
+
+                            {{ form.pwd.label() }}
+
+
+                            {% if form.pwd.errors %}
+
+
+                                {{ form.pwd(class='form-control is-invalid') }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.pwd.errors %}
+                                    <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+
+                            {% else %}
+
+                                {{ form.pwd(class='form-control') }}
+
+                            {% endif %}
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row d-flex justify-content-center mb-5">
+
+                    <div class="col-md-8">
+
+                        <div class="form-check form-check-inline">
+
+
+                            {{ form.rmber(class="form-check-input") }}
+                            <span>Remember me</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row d-flex justify-content-center mb-4">
+
+
+                    <div class="col-md-3">
+
+                        <input class="btn btn-primary" type="submit" value="Login">
+
+                    </div>
+                </div>
+
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+
+                  {% if messages %}
+
+                          {% for category, message in messages %}
+
+                                <div class="row d-flex justify-content-center" >
+
+                                    <div class="col-md-5">
+
+                                        <div class="alert alert-{{ category }} alert-dismissible">
+                                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            {{ message }}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+
+                          {% endfor %}
+
+                  {% endif %}
+
+                {% endwith %}
+
+
+
+            </form>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

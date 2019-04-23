@@ -1,0 +1,105 @@
+
+
+{% extends 'index.html' %}
+
+{% block dictionary %}
+
+<div class="container-fluid" >
+
+    <div class="row d-flex justify-content-center">
+
+<div class="col-md-8">
+
+        <!-- Card -->
+        <div class="card gradient-card">
+
+          <!-- Card image -->
+          <div class="view view-cascade gradient-card-header peach-gradient px-2">
+
+            <!-- Title -->
+            <h2 class="card-header-title mb-3">Registered Surfers</h2>
+            <!-- Subtitle -->
+            <p class="card-header-subtitle mb-0 text-dark">List of surfers using pamparios client</p>
+
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center">
+
+
+
+
+              <div class="row d-flex justify-content-center">
+
+
+                  <div class="col-md-10">
+
+
+                      <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email</th>
+                          <th>Permission</th>
+                          <th>Make Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Azed</td>
+                          <td>OKOTAN</td>
+                          <td>azizokotan@outlook.fr</td>
+                          <td>Administrator</td>
+                          <td>
+                              <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-edit"></i></button>
+                              <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-remove"></i></button>
+                          </td>
+                        </tr>
+
+
+                      <tr>
+                          <th scope="row">2</th>
+                          <td>Azed</td>
+                          <td>OKOTAN</td>
+                          <td>azizokotan@outlook.fr</td>
+                          <td>Administrator</td>
+                          <td>
+                              <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-edit"></i></button>
+                              <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-remove"></i></button>
+                          </td>
+                        </tr>
+
+
+
+                      </tbody>
+                    </table>
+
+                  </div>
+
+
+              </div>
+
+
+
+
+
+            <hr>
+
+            <a class="">Pamparios</a>
+
+          </div>
+
+        </div>
+
+</div>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

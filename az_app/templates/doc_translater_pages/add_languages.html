@@ -1,0 +1,141 @@
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+<div class="container" >
+
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-md-8" >
+
+
+            <div class="card gradient-card">
+
+                <div class="card-image mb-3" >
+
+                    <a href="#!">
+                        <div class="text-white d-flex h-100 mask peach-gradient">
+                            <div class="first-content align-self-center p-3">
+                                <h3 class="card-title text-dark">Add New Language</h3>
+                            </div>
+                            <div class="second-content align-self-center mx-auto text-center">
+                                <i class="far fa-money-bill-alt fa-3x"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+<!--                -->
+
+                <form method="POST" >
+
+                    <div class="row d-flex justify-content-center">
+
+
+                        <div class="col-md-10">
+
+                            <div class="md-form form-group">
+
+                                {{ form.hidden_tag() }}
+
+                                {{ form.lang_name.label() }}
+
+                                {% if form.lang_name.errors %}
+
+                                    {{ form.lang_name(class='form-control is-invalid') }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.lang_name.errors %}
+                                        <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+
+                                {% else %}
+
+                                    {{ form.lang_name(class='form-control') }}
+
+                                {% endif %}
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="row d-flex justify-content-center">
+
+
+                        <div class="col-md-10">
+
+                            <div class="md-form form-group">
+
+                                {{ form.lang_desc.label() }}
+
+                                {% if form.lang_desc.errors %}
+
+                                {{ form.lang_desc(class='form-control is-invalid') }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.lang_desc.errors %}
+                                    <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+
+                                {% else %}
+
+                                {{ form.lang_desc(class='form-control') }}
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <div class="row d-flex justify-content-center">
+
+
+                        <div class="col-md-10 d-flex justify-content-center">
+
+                            <div class="md-form form-group">
+
+                                {{ form.addbutton(class='btn btn-primary') }}
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </form>
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}
