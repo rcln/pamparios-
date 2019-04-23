@@ -1,5 +1,5 @@
 import os
-
+#commentaire
 DEBUG = True
 
 SECRET_KEY = 'mysecret'
