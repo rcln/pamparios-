@@ -1,0 +1,6 @@
+ 
+   Architecture des applications Web sous  JEE JSP, Servlet et EJB
+   Conception et mise en ceuvre
+   Licence professionnelle SIL
+   Mourad Ouziri  mourad.ouziri@parisdescartes.fr
+   ae DESCARTES IUT de Paris - Université Paris Descartes | a

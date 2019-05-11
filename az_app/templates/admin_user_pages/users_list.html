@@ -1,0 +1,99 @@
+
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container-fluid" >
+
+    <div class="row d-flex justify-content-center">
+
+<div class="col-md-8">
+
+        <!-- Card -->
+        <div class="card gradient-card">
+
+          <!-- Card image -->
+          <div class="view view-cascade gradient-card-header peach-gradient px-2">
+
+            <!-- Title -->
+            <h2 class="card-header-title mb-3">Users Information</h2>
+            <!-- Subtitle -->
+            <p class="card-header-subtitle mb-0 text-dark">List of granted users of pamparios</p>
+
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center">
+
+
+
+
+              <div class="row d-flex justify-content-center">
+
+
+                  <div class="col-md-10">
+
+
+                      <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>First Name</th>
+                          <th>Last Name</th>
+                          <th>Email</th>
+                          <th>Permission</th>
+                          <th>Make Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+                      {% for user in users %}
+
+                            <tr>
+                              <th scope="row">{{ user.id_admin }}</th>
+                              <td>{{ user.fname_admin }}</td>
+                              <td>{{ user.lname_admin }}</td>
+                              <td>{{ user.email_admin }}</td>
+                              <td>{{ user.permission_admin }}</td>
+                              <td>
+                                  <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-edit"></i></button>
+                                  <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-remove"></i></button>
+                              </td>
+                            </tr>
+
+                      {% endfor %}
+
+
+
+
+                      </tbody>
+                    </table>
+
+                  </div>
+
+
+              </div>
+
+
+
+
+
+            <hr>
+
+            <a class="">Pamparios</a>
+
+          </div>
+
+        </div>
+
+</div>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

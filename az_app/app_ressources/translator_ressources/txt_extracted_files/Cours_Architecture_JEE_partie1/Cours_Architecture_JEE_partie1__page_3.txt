@@ -1,0 +1,8 @@
+ 
+   Qualité des applications
+   = Objectif : développer des applications de qualité
+   — Plusieurs critéres de qualité (ISO 9126, FURPS, etc.)  = Maintenabilité, un critére de qualité important !
+   = Maintenance logicielle
+   — Les changements qui doivent étre apportés a un logiciel aprés sa livraison a  Putilisateur (Martin et McClure 1983)
+   — La totalité des activités qui sont requises afin de procurer un support, au  meilleur cout possible, d’un logiciel. Certaines activités débutent avant la  livraison du logiciel, donc pendant sa conception initiale (SWEBO 2005)
+   3

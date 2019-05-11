@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pamparios Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/bootstrap.min.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/mdb.min.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/font-awesome-4.7.0/css/font-awesome.min.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/font-awesome-4.7.0/css/font-awesome.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/mon.css') }}"  type="text/css">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/addons/datatables.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/addons/datatables-select.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/addons/datatables-select.min.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/addons/directives.css') }}"  type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='static/css/addons/directives.min.css') }}"  type="text/css">
+
+  <script type="text/javascript" src="https://fonts.googleapis.com/css?family=Times%20New%20Roman:400,300,700" ></script>
+
+
+</head>
+<body class="" style="font-family: 'Times New Roman'">
+
+
+<main style="margin-top: 0px;">
+  {% block display_pages %}{% endblock %}
+</main>
+
+
+
+
+
+<footer class="page-footer font-small blue foot-fix-bottom">
+
+  <div class="footer-copyright text-center py-3">
+    <a href="/admin"> Pamparios Project </a>© 2019 Copyright
+  </div>
+
+</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/jquery-3.3.1.min.js') }}" ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/popper.min.js') }}"  ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/bootstrap.min.js') }}"  ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/addons/datatables.min.js') }}" ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/mdb.min.js') }}" ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/mdb.js') }}" ></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='static/js/uploadFile.js') }}" ></script>
+
+  <script>
+    $(document).ready(function(){
+
+        $("#langid").click(function () {
+
+            $('#language').modal();
+
+        });
+
+    });
+  </script>
+
+</body>
+</html>

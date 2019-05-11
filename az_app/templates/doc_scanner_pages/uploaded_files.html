@@ -1,0 +1,139 @@
+
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="container-fluid" >
+
+    <div class="row d-flex justify-content-center">
+
+<div class="col-md-8">
+
+        <!-- Card -->
+        <div class="card gradient-card">
+
+          <!-- Card image -->
+          <div class="view view-cascade gradient-card-header peach-gradient px-2">
+
+            <!-- Title -->
+<!--            <div class="row">-->
+
+<!--                <div class="col-md-5">-->
+
+<!--                    <h2 class="card-header-title mb-3">Ressources</h2>-->
+<!--&lt;!&ndash;                    <h2 class="float-right">Ressources</h2>&ndash;&gt;-->
+
+
+<!--                </div>-->
+
+<!--                <div class="col-md-5">-->
+
+<!--                   <button type="button" class="btn btn-primary az-radius btn-lg float-right" >Extract</button>-->
+
+<!--                </div>-->
+
+
+<!--            </div>-->
+
+              <h2 class="card-header-title mb-3">Ressources</h2>
+<!--              <button type="button" class="btn btn-primary btn-md float-right" >Extract</button>-->
+            <!-- Subtitle -->
+            <p class="card-header-subtitle mb-0 text-dark">List of files uploaded to train the translator</p>
+
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center">
+
+
+
+
+              <div class="row d-flex justify-content-center">
+
+
+                  <div class="col-md-10">
+
+
+                      <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Name</th>
+                          <th>Progression</th>
+                          <th>Languages</th>
+                          <th>Download</th>
+                          <th>Make Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+
+                      {% for doc in docs %}
+
+
+                        <tr>
+                          <th scope="row">{{ doc.id_doc }}</th>
+                          <td>{{ doc.name_doc }}</td>
+                          <td>0 %</td>
+                          <td>{{ doc.ownlang.language }}</td>
+                          <td><button type="button" class="btn btn-success az-radius btn-sm my-0"><i class="fa fa-download"></i></button></td>
+                          <td>
+
+                             <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-folder-open"></i></button>
+                             <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-remove"></i></button>
+                             <button type="button" class="btn btn-info az-radius btn-sm my-0"><i class="fa fa-info-circle"></i></button>
+
+                          </td>
+                        </tr>
+
+
+                      {% endfor %}
+
+
+
+                      </tbody>
+                    </table>
+
+                  </div>
+
+
+              </div>
+
+
+            <hr>
+
+              <div class="row d-flex justify-content-center" >
+
+                  <div class="col-md-10" >
+
+                      <form method="POST">
+
+                          <input class="btn btn-primary" type="submit" value="Extract Text" />
+
+                      </form>
+
+
+                  </div>
+
+
+              </div>
+
+
+            <hr>
+
+            <a class="">Pamparios</a>
+
+          </div>
+
+        </div>
+
+</div>
+
+    </div>
+
+
+
+</div>
+
+{% endblock %}

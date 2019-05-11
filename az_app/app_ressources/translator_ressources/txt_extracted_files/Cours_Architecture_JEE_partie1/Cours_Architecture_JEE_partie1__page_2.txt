@@ -1,0 +1,10 @@
+ 
+   Applications web
+   = Application accessible sur le Web, donc en HTTP
+   = Retourne des résultats visualisables par un navigateur Internet, donc
+   en HTML/CSS/JS
+   Serveur Web (Tomcat)
+                
+    
+   http + html  —————
+   . : \  Client navigateur ~N Application Web n
